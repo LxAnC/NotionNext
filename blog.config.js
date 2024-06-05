@@ -150,7 +150,7 @@ const BLOG = {
 
   // 侧栏布局 是否反转(左变右,右变左) 已支持主题: hexo next medium fukasawa example
   LAYOUT_SIDEBAR_REVERSE:
-    process.env.NEXT_PUBLIC_LAYOUT_SIDEBAR_REVERSE || false,
+    process.env.NEXT_PUBLIC_LAYOUT_SIDEBAR_REVERSE || true,
 
   // 一个小插件展示你的facebook fan page~ @see https://tw.andys.pro/article/add-facebook-fanpage-notionnext
   FACEBOOK_PAGE_TITLE: process.env.NEXT_PUBLIC_FACEBOOK_PAGE_TITLE || null, // 邊欄 Facebook Page widget 的標題欄，填''則無標題欄 e.g FACEBOOK 粉絲團'
@@ -179,7 +179,7 @@ const BLOG = {
     'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css', // 深色模式主题
 
   CODE_MAC_BAR: process.env.NEXT_PUBLIC_CODE_MAC_BAR || true, // 代码左上角显示mac的红黄绿图标
-  CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || false, // 是否显示行号
+  CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || true, // 是否显示行号
   CODE_COLLAPSE: process.env.NEXT_PUBLIC_CODE_COLLAPSE || true, // 是否支持折叠代码框
   CODE_COLLAPSE_EXPAND_DEFAULT:
     process.env.NEXT_PUBLIC_CODE_COLLAPSE_EXPAND_DEFAULT || true, // 折叠代码默认是展开状态
@@ -217,7 +217,7 @@ const BLOG = {
   POST_PREVIEW_LINES: process.env.NEXT_PUBLIC_POST_POST_PREVIEW_LINES || 12, // 预览博客行数
   POST_RECOMMEND_COUNT: process.env.NEXT_PUBLIC_POST_RECOMMEND_COUNT || 6, // 推荐文章数量
   POSTS_PER_PAGE: process.env.NEXT_PUBLIC_POST_PER_PAGE || 12, // post counts per page
-  POSTS_SORT_BY: process.env.NEXT_PUBLIC_POST_SORT_BY || 'notion', // 排序方式 'date'按时间,'notion'由notion控制
+  POSTS_SORT_BY: process.env.NEXT_PUBLIC_POST_SORT_BY || 'date', // 排序方式 'date'按时间,'notion'由notion控制
 
   POST_WAITING_TIME_FOR_404:
     process.env.NEXT_PUBLIC_POST_WAITING_TIME_FOR_404 || '8', // 文章加载超时时间，单位秒；超时后跳转到404页面
@@ -238,7 +238,7 @@ const BLOG = {
 
   //   ********动态特效相关********
   // 鼠标点击烟花特效
-  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || false, // 开关
+  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || true, // 开关
   // 烟花色彩，感谢 https://github.com/Vixcity 提交的色彩
   FIREWORKS_COLOR: [
     '255, 20, 97',
@@ -255,7 +255,7 @@ const BLOG = {
   MOUSE_FOLLOW_EFFECT_COLOR: '#ef672a', // 鼠标点击特效颜色 #xxxxxx 或者 rgba(r,g,b,a)
 
   // 樱花飘落特效
-  SAKURA: process.env.NEXT_PUBLIC_SAKURA || false, // 开关
+  SAKURA: process.env.NEXT_PUBLIC_SAKURA || true, // 开关
   // 漂浮线段特效
   NEST: process.env.NEXT_PUBLIC_NEST || false, // 开关
   // 动态彩带特效
@@ -263,7 +263,7 @@ const BLOG = {
   // 静态彩带特效
   RIBBON: process.env.NEXT_PUBLIC_RIBBON || false, // 开关
   // 星空雨特效 黑夜模式才会生效
-  STARRY_SKY: process.env.NEXT_PUBLIC_STARRY_SKY || false, // 开关
+  STARRY_SKY: process.env.NEXT_PUBLIC_STARRY_SKY || true, // 开关
 
   //   ********挂件组件相关********
   // AI 文章摘要生成 @see https://docs_s.tianli0.top/
