@@ -15,20 +15,20 @@ const CONFIG = {
   HEO_HERO_BODY_REVERSE: true,
 
   // 英雄区(首页顶部大卡)
-  HEO_HERO_TITLE_1: '1',
-  HEO_HERO_TITLE_2: '2',
-  HEO_HERO_TITLE_3: '3',
-  HEO_HERO_TITLE_4: '4',
-  HEO_HERO_TITLE_5: '5',
+  HEO_HERO_TITLE_1: '知识分享',
+  HEO_HERO_TITLE_2: '技术分享',
+  HEO_HERO_TITLE_3: '算法相关',
+  HEO_HERO_TITLE_4: '实用教程',
+  HEO_HERO_TITLE_5: '资源专栏',
   HEO_HERO_TITLE_LINK: 'lxanc.top',
 
   // 英雄区显示三个置顶分类
-  HEO_HERO_CATEGORY_1: { title: '必看精选', url: '/tag/必看精选' },
-  HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/tag/热门文章' },
-  HEO_HERO_CATEGORY_3: { title: '实用教程', url: '/tag/实用教程' },
+  HEO_HERO_CATEGORY_1: { title: '必看精选', url: '/tag/jingxuan' },
+  HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/tag/hottitle' },
+  HEO_HERO_CATEGORY_3: { title: '实用教程', url: '/tag/jiaocheng' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
-  HEO_HERO_RECOMMEND_POST_TAG: '推荐',
+  HEO_HERO_RECOMMEND_POST_TAG: '推荐','工具',
   HEO_HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME: false, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
   //   HERO_RECOMMEND_COVER: 'https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg', // 英雄区右侧图片
 
@@ -106,8 +106,8 @@ const CONFIG = {
 
   HEO_SOCIAL_CARD: false, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '交流频道',
-  HEO_SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
-  HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
+  HEO_SOCIAL_CARD_TITLE_2: '加入讨论分享',
+  HEO_SOCIAL_CARD_TITLE_3: '联系方式',
   HEO_SOCIAL_CARD_URL: 'lxanc.top',
 
   // *****  以下配置无效，只是预留开发 ****
@@ -119,7 +119,7 @@ const CONFIG = {
   HEO_MENU_SEARCH: true, // 显示搜索
 
   HEO_POST_LIST_COVER: true, // 列表显示文章封面
-  HEO_POST_LIST_COVER_HOVER_ENLARGE: false, // 列表鼠标悬停放大
+  HEO_POST_LIST_COVER_HOVER_ENLARGE: true, // 列表鼠标悬停放大
 
   HEO_POST_LIST_COVER_DEFAULT: true, // 封面为空时用站点背景做默认封面
   HEO_POST_LIST_SUMMARY: true, // 文章摘要
