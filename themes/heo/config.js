@@ -20,7 +20,7 @@ const CONFIG = {
   HEO_HERO_TITLE_3: 'lxanc.top',
   HEO_HERO_TITLE_4: '最新发布',
   HEO_HERO_TITLE_5: '推荐文章',
-  HEO_HERO_TITLE_LINK: 'category/必看精选/',
+  HEO_HERO_TITLE_LINK: 'tag/必看精选',
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '必看精选', url: '/tag/必看精选' },
