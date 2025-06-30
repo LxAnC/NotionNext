@@ -7,14 +7,14 @@ const CONFIG = {
 
     // 英雄区块导航
     PROXIO_HERO_ENABLE: true, // 开启英雄区
-    PROXIO_HERO_TITLE_1: '开源且免费的基于 Notion 笔记的网站构建工具', // 英雄区文字
-    PROXIO_HERO_TITLE_2: '通过笔记无感知地建站、成倍放大您的价值', // 英雄区文字
+    PROXIO_HERO_TITLE_1: 'Hello,请随便看看~~', // 英雄区文字
+    PROXIO_HERO_TITLE_2: '通过不断地学习，逐渐提升自身价值', // 英雄区文字
     // 英雄区两个按钮，如果TEXT留空则隐藏按钮
     PROXIO_HERO_BUTTON_1_TEXT: '开始体验', // 英雄区按钮
     PROXIO_HERO_BUTTON_1_URL:
         'https://docs.tangly1024.com/article/vercel-deploy-notion-next', // 英雄区按钮
     PROXIO_HERO_BUTTON_2_TEXT: '在Github上关注', // 英雄区按钮
-    PROXIO_HERO_BUTTON_2_URL: 'https://github.com/tangly1024/NotionNext', // 英雄区按钮
+    PROXIO_HERO_BUTTON_2_URL: 'https://github.com/LxAnC', // 英雄区按钮
     PROXIO_HERO_BUTTON_2_ICON: '/images/starter/github.svg', // 英雄区按钮2的图标，不需要则留空
 
     // 英雄区配图，如需隐藏，改为空值即可 ''
@@ -61,7 +61,7 @@ const CONFIG = {
     PROXIO_FEATURE_3_TEXT_1: '精益求精雕琢每个元素，确保成品精致统一，令人过目难忘',
 
     PROXIO_FEATURE_BUTTON_TEXT: '了解更多', // 按钮文字
-    PROXIO_FEATURE_BUTTON_URL: 'https://github.com/tangly1024/NotionNext', // 按钮跳转
+    PROXIO_FEATURE_BUTTON_URL: 'https://github.com/LxAnC', // 按钮跳转
 
     // 首页生涯区块
     PROXIO_CAREER_ENABLE: true, // 区块开关
@@ -159,7 +159,7 @@ const CONFIG = {
     // 关于作者区块
     PROXIO_ABOUT_ENABLE: true, // 关于作者区块区块开关
     PROXIO_ABOUT_TITLE: '关于作者',
-    PROXIO_ABOUT_TEXT_1: 'I am an Architect Turned Into a Product Designer',
+    PROXIO_ABOUT_TEXT_1: 'I am an Coder...',
     PROXIO_ABOUT_TEXT_2:
         'With a background in architecture, I now apply my expertise to product design, blending aesthetics, functionality, and innovation. My goal is to create modern, user-focused designs that bring your vision to life.',
     PROXIO_ABOUT_PHOTO_URL: '/avatar.png',
@@ -193,34 +193,34 @@ const CONFIG = {
             name: '友情链接',
             menus: [
                 {
-                    title: 'Tangly的学习笔记',
-                    href: 'https://blog.tangly1024.com'
+                    title: '学习笔记',
+                    href: 'lancc.top'
                 },
                 {
-                    title: 'NotionNext',
-                    href: 'https://www.tangly1024.com'
+                    title: '探索一切',
+                    href: 'https://github.com/LxAnC'
                 }
             ]
         },
         {
             name: '开发者',
             menus: [
-                { title: 'Github', href: 'https://github.com/tangly1024/NotionNext' },
+                { title: 'Github', href: 'https://github.com/LxAnC' },
                 {
                     title: '开发帮助',
-                    href: 'https://docs.tangly1024.com/article/how-to-develop-with-notion-next'
+                    href: ''
                 },
                 {
                     title: '功能反馈',
-                    href: 'https://github.com/tangly1024/NotionNext/issues/new/choose'
+                    href: ''
                 },
                 {
                     title: '技术讨论',
-                    href: 'https://github.com/tangly1024/NotionNext/discussions'
+                    href: 'https://github.com/LxAnC/NotionNext/discussions'
                 },
                 {
                     title: '关于作者',
-                    href: 'https://blog.tangly1024.com/about'
+                    href: 'https://github.com/LxAnC'
                 }
             ]
         }],
@@ -253,7 +253,7 @@ const CONFIG = {
     PROXIO_CTA_BUTTON_TEXT: '联系我',
 
     PROXIO_POST_REDIRECT_ENABLE: true, // 默認開啟重定向
-    PROXIO_POST_REDIRECT_URL: 'https://blog.tangly1024.com', // 重定向域名
+    PROXIO_POST_REDIRECT_URL: 'https://lancc.top', // 重定向域名
     PROXIO_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_PROXIO_NEWSLETTER || false // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
 }
 export default CONFIG
