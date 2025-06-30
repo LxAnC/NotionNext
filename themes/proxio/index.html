@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>定制数学题生成器</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f8f9fa;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+    #questions {
+      margin-top: 20px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .answer {
+      display: none;
+      color: green;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>陆秋朵定制数学题生成</h1>
+
+<button id="generateBtn">生成题目</button>
+<button onclick="toggleAnswers()">显示/隐藏答案</button>
+
+<div id="questions"></div>
+
+<script>
+  const generateBtn = document.getElementById('generateBtn');
+
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function toFixedNumber(num) {
+    return Math.round(num * 100) / 100;
+  }
+
+  function generateQuestions() {
+    const questionsDiv = document.getElementById('questions');
+    questionsDiv.innerHTML = '';
+    let questions = [];
+
+    // 防止多次点击
+    generateBtn.disabled = true;
+    setTimeout(() => generateBtn.disabled = false, 300);
+
+    // 1. 小数加法（强制进位）
+    let a1 = toFixedNumber(getRandomInt(10, 99) + Math.random());
+    let b1 = toFixedNumber(getRandomInt(10, 99) + Math.random());
+    while (Math.floor(a1 + b1) === Math.floor(a1) + Math.floor(b1)) {
+      b1 = toFixedNumber(getRandomInt(10, 99) + Math.random());
+    }
+    questions.push({
+      text: `${a1} + ${b1}`,
+      answer: toFixedNumber(a1 + b1)
+    });
+
+    // 2. 整数加法（强制进位）
+    let a2 = getRandomInt(100, 999);
+    let b2 = getRandomInt(100, 999);
+    while ((a2 % 10 + b2 % 10) < 10) {
+      b2 = getRandomInt(100, 999);
+    }
+    questions.push({
+      text: `${a2} + ${b2}`,
+      answer: a2 + b2
+    });
+
+    // 3. 小数减法（强制退位）
+    let tryCount = 0;
+    let a3, b3;
+    do {
+      a3 = toFixedNumber(getRandomInt(50, 99) + Math.random());
+      b3 = toFixedNumber(getRandomInt(1, 49) + Math.random());
+      tryCount++;
+      if (tryCount > 100) break; // 安全机制
+    } while (Math.floor(a3) % 10 >= Math.floor(b3) % 10);
+    questions.push({
+      text: `${a3} - ${b3}`,
+      answer: toFixedNumber(a3 - b3)
+    });
+
+    // 4. 整数减法（强制退位）
+    tryCount = 0;
+    let a4, b4;
+    do {
+      a4 = getRandomInt(500, 999);
+      b4 = getRandomInt(100, 499);
+      tryCount++;
+      if (tryCount > 100) break;
+    } while (a4 % 10 >= b4 % 10);
+    questions.push({
+      text: `${a4} - ${b4}`,
+      answer: a4 - b4
+    });
+
+    // 5. 两位数乘法
+    let a5 = getRandomInt(10, 99);
+    let b5 = getRandomInt(10, 99);
+    questions.push({
+      text: `${a5} × ${b5}`,
+      answer: a5 * b5
+    });
+
+    // 6. 整数除法（商为整数）
+    let divisor = getRandomInt(2, 9);
+    let quotient = getRandomInt(10, 99);
+    let dividend = divisor * quotient;
+    questions.push({
+      text: `${dividend} ÷ ${divisor}`,
+      answer: quotient
+    });
+
+    // 显示题目
+    questions.forEach((q, i) => {
+      const p = document.createElement('p');
+      p.innerHTML = ` ${q.text} = <span class="answer">${q.answer}</span>`;
+      questionsDiv.appendChild(p);
+    });
+  }
+
+  function toggleAnswers() {
+    const answers = document.querySelectorAll('.answer');
+    answers.forEach(span => {
+      span.style.display = (span.style.display === 'inline') ? 'none' : 'inline';
+    });
+  }
+
+  generateBtn.addEventListener('click', generateQuestions);
+</script>
+
+</body>
+</html>
